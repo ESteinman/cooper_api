@@ -1,4 +1,4 @@
-class CreatePerformanceData < ActiveRecord::Migration[5.1]
+class CreatePerformanceData < ActiveRecord::Migration[5.0]
   def change
     execute 'CREATE EXTENSION IF NOT EXISTS hstore'
     create_table :performance_data do |t|

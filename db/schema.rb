@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20180808094009) do
   enable_extension "plpgsql"
   enable_extension "hstore"
 
-  create_table "performance_data", force: :cascade do |t|
-    t.bigint "user_id"
+  create_table "performance_data", id: :serial, force: :cascade do |t|
+    t.integer "user_id"
     t.hstore "data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
